@@ -48,6 +48,7 @@
   .stars
     flex-basis: auto
   .hotel
+    padding-top: 0
     &-wrapper
       justify-content: space-between
     &-name
@@ -67,3 +68,10 @@
   .logo
     width: 99px
      
+@media (max-width: 320px)
+  .stars
+    padding-right: 30px
+  .hotel
+    &-info
+      &__description
+        padding-right: 30px
