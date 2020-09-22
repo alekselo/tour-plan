@@ -9,6 +9,10 @@
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=138986ea-965a-4669-b09c-37c6c7161bc9&lang=ru_RU"
+      type="text/javascript"
+    ></script>
     <title>Best Tour Plan - Hotel Booking</title>
   </head>
   <body>
@@ -194,7 +198,9 @@
               <button class="button booking__button">View Other Options</button>
             </div>
             <!-- /.booking -->
-            <div class="map"></div>
+            <div class="map">
+              <div id="map" style="width: 100%; height: 100%"></div>
+            </div>
           </div>
           <!-- /.hotel-right -->
         </div>

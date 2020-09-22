@@ -16,3 +16,17 @@ var mySwiper = new Swiper(".swiper-container", {
     delay: 3000,
   },
 });
+
+ymaps.ready(init);
+function init() {
+  var myMap = new ymaps.Map(
+    "map",
+    {
+      center: [43.079969, 5.889569],
+      zoom: 15,
+    },
+    {
+      searchControlProvider: "yandex#search",
+    }
+  );
+}
