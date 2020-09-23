@@ -29,4 +29,16 @@ function init() {
       searchControlProvider: "yandex#search",
     }
   );
+  myMap.geoObjects.add(
+    new ymaps.Placemark(
+      [43.079969, 5.889569],
+      {
+        balloonContent: "Мой <strong>Отель</strong>",
+        iconCaption: "GRAND HILTON HOTEL",
+      },
+      {
+        preset: "islands#greenDotIconWithCaption",
+      }
+    )
+  );
 }
