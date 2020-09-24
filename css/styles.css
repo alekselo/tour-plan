@@ -582,6 +582,7 @@ template {
 .hotel-slider {
   width: 728px;
   height: 450px;
+  border-radius: 8px;
 }
 
 .hotel-slider__item {
@@ -922,7 +923,7 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 730px;
+  max-width: 730px;
   margin: 45px auto 0;
   background-color: #fff;
   border-radius: 8px;
@@ -1040,10 +1041,10 @@ template {
   .container {
     max-width: 960px;
   }
-  .slider {
+  .hotel-slider {
     width: 590px;
   }
-  .slider .swiper-slide__image {
+  .hotel .swiper-slide__image {
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
@@ -1089,14 +1090,17 @@ template {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .hotel-slider {
+    width: 100%;
+  }
   .booking {
     width: 340px;
   }
-  .slider {
-    width: 100%;
-  }
   .map {
     width: 340px;
+  }
+  .reviews-slider__item {
+    max-width: 580px;
   }
 }
 
@@ -1165,10 +1169,10 @@ template {
             order: -1;
     margin-left: 0;
   }
-  .swiper-container {
+  .hotel-slider {
     height: 350px;
   }
-  .slider {
+  .swiper-container {
     height: 350px;
   }
   .hotel-right {
@@ -1193,6 +1197,27 @@ template {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  .reviews-slider__item {
+    padding: 0 30px 30px;
+  }
+  .reviews-slider__item:after, .reviews-slider__item::before {
+    display: none;
+  }
+  .reviews-slider__button {
+    top: 45px;
+  }
+  .reviews-slider__button--prev {
+    left: 50%;
+    margin-left: -65px;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  .reviews-slider__button--next {
+    right: 50%;
+    margin-right: -65px;
+    -webkit-transform: translate(50%, 0);
+            transform: translate(50%, 0);
+  }
 }
 
 @media (max-width: 576px) {
@@ -1202,7 +1227,7 @@ template {
   .swiper-container {
     height: 250px;
   }
-  .slider {
+  .hotel-slider {
     height: 250px;
     margin-bottom: 20px;
   }
@@ -1233,10 +1258,10 @@ template {
   .hotel-info__description {
     padding-right: 30px;
   }
-  .swiper-container {
+  .hotel-slider {
     height: 179px;
   }
-  .slider {
+  .swiper-container {
     height: 179px;
   }
   .hotel-right {
