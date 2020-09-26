@@ -47,15 +47,14 @@
     &-slider
       &__item
         max-width: 580px
-@media (max-width:768px)
+@media (max-width:769px)
   .container
     max-width: 576px
     width: 92%
   .navbar
     &__search,
     &-menu, &__user
-      display: none
-   
+      display: none  
   .menu
     &-button
       display: flex
@@ -93,8 +92,7 @@
     &-slider
       height: 350px
   .swiper-container
-    height: 350px
-  
+    height: 350px 
   .hotel
     &-right
       flex-direction: column
@@ -108,16 +106,21 @@
       flex-direction: column
       align-items: flex-start
   .reviews
+    &__title
+      font-style: normal
+      font-weight: bold
+      font-size: 30px
+      line-height: 38px
     &-slider
       &__item
         padding: 0 30px 30px
         &:after, &::before
           display: none
       &__button
-        top: 45px     
+        top: 45px
         &--prev
           left: 50%
-          margin-left: -65px 
+          margin-left: -65px
           transform: translate(-50%, 0)
         &--next
           right: 50%
@@ -128,7 +131,7 @@
   .logo
     width: 99px
   .swiper-container
-    height: 250px
+    height: 250px    
   .hotel
     &-slider
       height: 250px
@@ -138,18 +141,25 @@
     &__title
       margin-top: 0
       margin-bottom: 37px
-      font-style: normal;
-      font-weight: 300;
-      font-size: 20px;
+      font-style: normal
+      font-weight: 300
+      font-size: 20px
       line-height: 25px
   .newsletter-title
     &__strong
-      font-size: 30px;
-      line-height: 38px;
+      font-size: 30px
+      line-height: 38px
   .subscribe
     width: 100%
-     
-@media (max-width: 320px)
+  .reviews
+    &-slider
+      &__text
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 160%;
+
+@media (min-width: 320px) and (max-width: 576px)
   .stars
     padding-right: 30px
   .hotel
@@ -159,10 +169,22 @@
     &-slider
       height: 179px
   .swiper-container
-    height: 179px
-  
+    height: 560px  
   .hotel
     &-right
       min-height: 405px
   .map
     height: 173px
+  .reviews
+    &__title
+      font-style: normal
+      font-weight: bold
+      font-size: 18px
+      line-height: 23px
+      margin-bottom: 42px
+    &-slider
+      &__item
+        &:before, &:after
+          display: none
+
+  
