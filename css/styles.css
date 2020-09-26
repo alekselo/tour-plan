@@ -1167,9 +1167,6 @@ template {
   .hotel-slider {
     height: 350px;
   }
-  .swiper-container {
-    height: 350px;
-  }
   .hotel-right {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1225,9 +1222,6 @@ template {
   .logo {
     width: 99px;
   }
-  .swiper-container {
-    height: 250px;
-  }
   .hotel-slider {
     height: 250px;
     margin-bottom: 20px;
@@ -1268,9 +1262,6 @@ template {
   .hotel-slider {
     height: 179px;
   }
-  .swiper-container {
-    height: 560px;
-  }
   .hotel-right {
     min-height: 405px;
   }
@@ -1283,6 +1274,7 @@ template {
     font-size: 18px;
     line-height: 23px;
     margin-bottom: 42px;
+    padding: 0 20px;
   }
   .reviews-slider__item:before, .reviews-slider__item:after {
     display: none;
