@@ -1109,7 +1109,6 @@ template {
 .card__title {
   margin-top: auto;
   margin-bottom: 18px;
-  padding-right: 25px;
   color: #ffffff;
   font-style: normal;
   font-weight: bold;
@@ -1147,6 +1146,9 @@ template {
   .card {
     width: 230px;
     height: 230px;
+  }
+  .card__title {
+    font-size: 14px;
   }
 }
 
@@ -1200,6 +1202,13 @@ template {
   .reviews-slider__item {
     max-width: 580px;
   }
+  .reviews__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 50px;
+  }
   .activities-wrapper {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1210,6 +1219,9 @@ template {
   .card {
     width: 340px;
     height: 255px;
+  }
+  .card__title {
+    font-size: 16px;
   }
 }
 
@@ -1309,9 +1321,8 @@ template {
   .reviews__title {
     font-style: normal;
     font-weight: bold;
-    font-size: 30px;
-    line-height: 38px;
-    margin-bottom: 50px;
+    font-size: 18px;
+    line-height: 23px;
   }
   .reviews-slider__item {
     padding: 0 30px 30px;
