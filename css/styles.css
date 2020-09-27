@@ -632,6 +632,10 @@ template {
   background-image: url(../img/arrow-left.svg);
 }
 
+.swiper-container {
+  margin: 0;
+}
+
 .stars {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
