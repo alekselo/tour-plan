@@ -1308,6 +1308,7 @@ template {
   background-color: #EC1F46;
   border-radius: 4px;
   border: none;
+  cursor: pointer;
 }
 
 .footer__info {
@@ -1316,6 +1317,48 @@ template {
   font-size: 12px;
   line-height: 15px;
   color: #E0E0E0;
+}
+
+.footer-wrapper-bottom {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  padding-top: 95px;
+  padding-bottom: 46px;
+}
+
+.footer-container {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__information {
+  max-width: 283px;
+}
+
+.footer__policy {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  text-decoration: none;
+  color: #fff;
+  margin-right: 5px;
+}
+
+.footer__pay-way {
+  width: 136px;
+  cursor: pointer;
 }
 
 @media (max-width: 1200px) {
