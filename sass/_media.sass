@@ -74,16 +74,18 @@
       font-size: 16px
   .footer
     &-wrapper
-      grid-template-columns: repeat(6, 1fr)
+      grid-template-columns: 1fr 1fr 2fr 1fr 1fr 1fr
       grid-row-gap: 40px
     &__logo
       grid-row: 1 / 2
       grid-column: span 2
+      width: 104px
     &__social
       &-network
         grid-row: 1 / 2
         grid-column: span 4
         align-self: center
+        margin-left: -20px
     &__categories
       grid-row: 2 / 3
       grid-column: span 2
@@ -91,6 +93,7 @@
       grid-column: span 2
     &__legal
       grid-column: span 2
+      margin-left: 0
     &__contact
       &-details
         grid-column: span 5
@@ -98,6 +101,8 @@
       &-form
         grid-column: span 5
         grid-row: 4
+    &__form
+      max-width: 540px
     &__input
       flex-basis: 49%
     &-wrapper-bottom
@@ -106,6 +111,8 @@
     &-container
       grid-row: 1
       grid-column: 1
+    &__information
+      margin-left: 0
 @media (max-width:769px)
   .container
     max-width: 576px
@@ -196,7 +203,18 @@
       flex-basis: 100%
     &-wrapper-bottom
       padding-top: 56px
-
+@media (min-width: 576px) and (max-width: 768px)
+  .footer
+    &__additional
+      grid-column: span 3
+    &__legal
+      grid-row: 3
+      grid-column: span 3
+    &__contact
+      &-details
+        grid-row: 4
+      &-form
+        grid-row: 5
 @media (max-width:576px)
   .logo
     width: 99px
@@ -268,9 +286,10 @@
       &-form
         grid-row: 7
         grid-column: 1
-        width: 94%
+        width: 100%
     &__social-network
       display: block
+      margin-left: 0
     &__title--inline
       margin-bottom: 20px
     &__social-links
@@ -312,6 +331,11 @@
   .activities
     padding-top: 50px
   .footer
+    &-wrapper
+      grid-row-gap: 30px
+    &__title
+      &--mb-32
+        margin-bottom: 15px
     &__contact-form
       grid-column: 0
     &__info
