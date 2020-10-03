@@ -1582,7 +1582,9 @@ template {
     display: flex;
   }
   .navbar__search--mobile--visible {
-    width: 60%;
+    width: 245px;
+    margin-top: 7px;
+    margin-bottom: 22px;
   }
   .navbar__user {
     -webkit-box-orient: vertical;
@@ -1605,6 +1607,7 @@ template {
   }
   .navbar-bottom--visible {
     display: block;
+    overflow-y: scroll;
   }
   .navbar-menu {
     -webkit-box-orient: vertical;
@@ -1613,7 +1616,7 @@ template {
             flex-direction: column;
   }
   .navbar-menu__item {
-    margin-bottom: 20px;
+    margin-bottom: 17px;
   }
   .navbar-menu__item--mobile--visible {
     display: block;
