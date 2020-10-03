@@ -117,10 +117,43 @@
   .container
     max-width: 576px
     width: 92%
+  body
+    padding-top: 78px
   .navbar
-    &__search,
-    &-menu, &__user
+    &__mobile--fixed
+      position: fixed
+      top: 0
+      left: 0
+      right: 0
+      z-index: 99
+    &__search, &__user
+      &--mobile--hidden
+        display: none
+      &--mobile--visible
+        display: flex
+    &__search
+      &--mobile--visible
+        width: 60%
+    &__user
+      flex-direction: column
+      justify-content: center
+    &-bottom
       display: none
+      position: fixed
+      left: 30%
+      right: 30%
+      bottom: 20%
+      top: 78px
+      padding-top: 30px
+      border-radius: 8px
+      &--visible
+        display: block
+    &-menu
+      flex-direction: column
+      &__item
+        margin-bottom: 20px
+        &--mobile--visible
+          display: block
   .menu
     &-button
       display: flex
@@ -137,6 +170,12 @@
         width: 16px
         height: 1px
         background-color: $text-color
+  .user
+    &__name
+      &--light
+        color: $light
+        margin-left: 0
+        margin-top: 10px
   .stars
     flex-basis: auto
   .hotel
@@ -216,6 +255,14 @@
       &-form
         grid-row: 5
 @media (max-width:576px)
+  .navbar
+    &-bottom
+      right: 10%
+      left: 10%
+    &__search
+      &--mobile--visible
+        width: 80%
+
   .logo
     width: 99px
   .hotel
@@ -302,6 +349,14 @@
       padding-top: 30px
 
 @media (min-width: 320px) and (max-width: 576px)
+  .navbar
+    &-bottom
+      right: 0
+      left: 0
+      bottom: 0
+    &__search
+      &--mobile--visible
+        width: 245px
   .stars
     padding-right: 30px
   .hotel
