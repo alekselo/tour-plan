@@ -18,7 +18,9 @@
     <header class="navbar navbar__mobile--fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="logo"
+          <a
+            href="https://alexeyloktev.ru/homeworks/best-tour-plan/"
+            class="logo"
             ><img
               src="img/horizontal-logo.svg"
               alt="Logo: Best Tour Plan"
@@ -243,7 +245,9 @@
                 </a>
               </div>
               <!-- /.booking__call-center -->
-              <button class="button booking__button">View Other Options</button>
+              <button data-toggle="modal" class="button booking__button">
+                View Other Options
+              </button>
             </div>
             <!-- /.booking -->
             <div class="map">
@@ -275,6 +279,7 @@
               class="subscribe__input"
               placeholder="Your email address"
               name="mail"
+              required
             />
             <button class="subscribe__button">Send</button>
           </form>
@@ -711,19 +716,22 @@
                 class="input footer__input"
                 placeholder="Your Full Name*"
                 name="name"
+                required
               />
               <input
                 type="text"
                 class="input footer__input"
                 placeholder="Phone Number*"
                 name="phone"
+                required
               />
               <textarea
                 cols="30"
                 rows="10"
-                class="footer__message"
+                class="message footer__message"
                 placeholder="Message"
                 name="message"
+                required
               ></textarea>
               <button class="button footer__button">Send</button>
               <span class="footer__info">* Required Fields</span>
@@ -748,6 +756,52 @@
       <!-- /.container -->
     </footer>
     <!-- /.footer -->
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <!-- /.modal__overlay -->
+      <div class="modal__dialog">
+        <a href="#" class="modal__close"
+          ><img src="img/close.svg" alt="Icon: close"
+        /></a>
+        <h3 class="modal__title modal__title--mb-32">Booking</h3>
+        <form action="send.php" method="POST" class="modal__form">
+          <input
+            type="text"
+            class="input modal__input"
+            placeholder="Your Full Name*"
+            name="name"
+            required
+          />
+          <input
+            type="text"
+            class="input modal__input"
+            placeholder="Phone Number*"
+            name="phone"
+            required
+          />
+          <input
+            type="text"
+            class="input modal__input"
+            placeholder="Your email address"
+            name="mail"
+            required
+          />
+          <textarea
+            cols="30"
+            rows="10"
+            class="message modal__message"
+            placeholder="Message"
+            name="message"
+            required
+          ></textarea>
+          <button class="button modal__button">Send</button>
+          <span class="modal__info">* Required Fields</span>
+        </form>
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal -->
+    <script src="js/jquery-3.5.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/parallax.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>

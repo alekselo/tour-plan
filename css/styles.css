@@ -17,6 +17,36 @@ img {
   max-width: 100%;
 }
 
+.input {
+  background-color: #fff;
+  border-radius: 4px;
+  border: none;
+  padding: 0 23px;
+  height: 50px;
+}
+
+.message {
+  background-color: #fff;
+  height: 123px;
+  border-radius: 4px;
+  padding: 18px 23px;
+  border: none;
+}
+
+.button {
+  min-width: 160px;
+  min-height: 50px;
+  padding: 18px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+  background-color: #EC1F46;
+  border-radius: 4px;
+  border: none;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1040,6 +1070,8 @@ template {
   line-height: 160%;
   text-align: justify;
   margin: auto;
+  height: 104px;
+  overflow: auto;
 }
 
 .activities {
@@ -1393,6 +1425,71 @@ template {
 .footer__pay-way {
   width: 136px;
   cursor: pointer;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 143, 223, 0.39);
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal__dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 478px;
+  padding: 33px 88px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #0A223D;
+  color: #ffffff;
+  border-radius: 8px;
+  z-index: 101;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal__close {
+  position: absolute;
+  top: 17px;
+  right: 18px;
+  text-decoration: none;
+}
+
+.modal__input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.modal__message {
+  width: 100%;
+  min-height: 123px;
+  margin-bottom: 15px;
+}
+
+.modal__info {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #E0E0E0;
+  margin-left: 40px;
+}
+
+.modal__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  margin: 0 0 16px 0;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 @media (max-width: 1200px) {
@@ -1947,6 +2044,9 @@ template {
   }
   .reviews-slider__item:before, .reviews-slider__item:after {
     display: none;
+  }
+  .reviews-slider__text {
+    height: 263px;
   }
   .activities {
     padding-top: 50px;

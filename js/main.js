@@ -1,72 +1,80 @@
-var hotelSlider = new Swiper(".hotel-slider", {
-  // Optional parameters
+$(document).ready(function () {
+  var hotelSlider = new Swiper(".hotel-slider", {
+    // Optional parameters
 
-  loop: true,
+    loop: true,
 
-  // Navigation arrows
-  navigation: {
-    nextEl: ".hotel-slider__button--next",
-    prevEl: ".hotel-slider__button--prev",
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false,
-  },
-  autoplay: {
-    delay: 3000,
-  },
-});
-var reviewsSlider = new Swiper(".reviews-slider", {
-  // Optional parameters
-
-  loop: true,
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".reviews-slider__button--next",
-    prevEl: ".reviews-slider__button--prev",
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false,
-  },
-  // autoplay: {
-  //   delay: 3000,
-  // },
-});
-
-ymaps.ready(init);
-function init() {
-  var myMap = new ymaps.Map(
-    "map",
-    {
-      center: [43.079969, 5.889569],
-      zoom: 15,
+    // Navigation arrows
+    navigation: {
+      nextEl: ".hotel-slider__button--next",
+      prevEl: ".hotel-slider__button--prev",
     },
-    {
-      searchControlProvider: "yandex#search",
-    }
-  );
-  myMap.geoObjects.add(
-    new ymaps.Placemark(
-      [43.079969, 5.889569],
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+    autoplay: {
+      delay: 3000,
+    },
+  });
+  var reviewsSlider = new Swiper(".reviews-slider", {
+    // Optional parameters
+
+    loop: true,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".reviews-slider__button--next",
+      prevEl: ".reviews-slider__button--prev",
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+    // autoplay: {
+    //   delay: 3000,
+    // },
+  });
+
+  ymaps.ready(init);
+  function init() {
+    var myMap = new ymaps.Map(
+      "map",
       {
-        balloonContent: "Мой <strong>Отель</strong>",
-        iconCaption: "GRAND HILTON HOTEL",
+        center: [43.079969, 5.889569],
+        zoom: 15,
       },
       {
-        preset: "islands#greenDotIconWithCaption",
+        searchControlProvider: "yandex#search",
       }
-    )
-  );
-}
+    );
+    myMap.geoObjects.add(
+      new ymaps.Placemark(
+        [43.079969, 5.889569],
+        {
+          balloonContent: "Мой <strong>Отель</strong>",
+          iconCaption: "GRAND HILTON HOTEL",
+        },
+        {
+          preset: "islands#greenDotIconWithCaption",
+        }
+      )
+    );
+  }
+
+  var menuButton = document.querySelector(".menu-button");
+  menuButton.addEventListener("click", function () {
+    console.log("Клик Клик");
+    document
+      .querySelector(".navbar-bottom")
+      .classList.toggle("navbar-bottom--visible");
+  });
+
+  var modalButton = $("[data-toggle=modal]");
+  modalButton.on("click"),
+    function () {
+      console.log("Вы кликнули по кнопке с атрибутом data-toggle=modal");
+    };
+});
 
 $(".newsletter").parallax({ imageSrc: "./img/newsletter-bg.jpg" });
-
-var menuButton = document.querySelector(".menu-button");
-menuButton.addEventListener("click", function () {
-  console.log("Клик Клик");
-  document
-    .querySelector(".navbar-bottom")
-    .classList.toggle("navbar-bottom--visible");
-});
