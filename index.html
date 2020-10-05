@@ -490,7 +490,7 @@
               of chamarel
             </h3>
             <!-- /.card__title -->
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
             <!-- /.card__button -->
           </div>
           <!-- /.card -->
@@ -763,7 +763,7 @@
         <a href="#" class="modal__close"
           ><img src="img/close.svg" alt="Icon: close"
         /></a>
-        <h3 class="modal__title modal__title--mb-32">Booking</h3>
+        <h3 class="modal__title">Booking</h3>
         <form action="send.php" method="POST" class="modal__form">
           <input
             type="text"
@@ -782,7 +782,7 @@
           <input
             type="text"
             class="input modal__input"
-            placeholder="Your email address"
+            placeholder="Email*"
             name="mail"
             required
           />
@@ -794,8 +794,10 @@
             name="message"
             required
           ></textarea>
-          <button class="button modal__button">Send</button>
-          <span class="modal__info">* Required Fields</span>
+          <div class="modal__footer">
+            <button class="button modal__button">Send</button>
+            <span class="modal__info">* Required Fields</span>
+          </div>
         </form>
       </div>
       <!-- /.modal__dialog -->

@@ -113,6 +113,16 @@
       grid-column: 1
     &__information
       margin-left: 0
+  .modal
+    &__info
+      order: 0
+      width: 100%
+      margin-bottom: 15px
+    &__button
+      order: 1
+    &__dialog
+      &--visible
+        padding: 33px 70px
 @media (max-width:769px)
   .container
     max-width: 576px
@@ -142,8 +152,8 @@
     &-bottom
       display: none
       position: fixed
-      left: 30%
-      right: 30%
+      left: 26%
+      right: 26%
       bottom: 20%
       top: 78px
       padding-top: 30px
@@ -245,6 +255,10 @@
       flex-basis: 100%
     &-wrapper-bottom
       padding-top: 56px
+  .modal
+    &__dialog
+      &--visible
+        padding: 10px 10px
 @media (min-width: 576px) and (max-width: 767px)
   .footer
     &__additional
@@ -408,3 +422,16 @@
       display: block
     &__information
       margin-bottom: 10px
+  .modal
+    &__dialog
+      &--visible
+
+        width: 95%
+        overflow: auto
+
+@media (max-width: 900px) and (max-height: 530px)
+  .modal
+    &__dialog
+      &--visible
+        height: 95%
+        overflow: auto

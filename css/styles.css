@@ -1437,6 +1437,13 @@ template {
   z-index: 100;
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.modal__overlay--visible {
+  visibility: visible;
+  opacity: 1;
 }
 
 .modal__dialog {
@@ -1453,6 +1460,24 @@ template {
   z-index: 101;
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.modal__dialog--visible {
+  visibility: visible;
+  opacity: 1;
+  overflow: auto;
+}
+
+.modal__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .modal__close {
@@ -1479,7 +1504,6 @@ template {
   font-size: 12px;
   line-height: 15px;
   color: #E0E0E0;
-  margin-left: 40px;
 }
 
 .modal__title {
@@ -1490,6 +1514,20 @@ template {
   margin: 0 0 16px 0;
   text-align: center;
   text-transform: uppercase;
+}
+
+.modal__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media (max-width: 1200px) {
@@ -1659,6 +1697,21 @@ template {
   .footer__information {
     margin-left: 0;
   }
+  .modal__info {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .modal__button {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .modal__dialog--visible {
+    padding: 33px 70px;
+  }
 }
 
 @media (max-width: 769px) {
@@ -1701,8 +1754,8 @@ template {
   .navbar-bottom {
     display: none;
     position: fixed;
-    left: 30%;
-    right: 30%;
+    left: 26%;
+    right: 26%;
     bottom: 20%;
     top: 78px;
     padding-top: 30px;
@@ -1857,6 +1910,9 @@ template {
   }
   .footer-wrapper-bottom {
     padding-top: 56px;
+  }
+  .modal__dialog--visible {
+    padding: 10px 10px;
   }
 }
 
@@ -2077,6 +2133,17 @@ template {
   }
   .footer__information {
     margin-bottom: 10px;
+  }
+  .modal__dialog--visible {
+    width: 95%;
+    overflow: auto;
+  }
+}
+
+@media (max-width: 900px) and (max-height: 530px) {
+  .modal__dialog--visible {
+    height: 95%;
+    overflow: auto;
   }
 }
 /*# sourceMappingURL=styles.css.map */
