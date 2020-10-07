@@ -64,6 +64,12 @@ button {
   cursor: pointer;
 }
 
+.back-to-index {
+  text-decoration: none;
+  font-size: 12px;
+  color: #0A223D;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -719,6 +725,11 @@ template {
 .rating__counter {
   font-size: 14px;
   line-height: 18px;
+}
+
+.rating__small {
+  font-size: 10px;
+  margin-left: -4px;
 }
 
 .booking {

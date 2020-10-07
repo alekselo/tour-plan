@@ -138,6 +138,11 @@
             <p class="hotel-description hotel-info__description">
               Наш сотрудник свяжется с Вами в ближайшее время.
             </p>
+            <a
+              href="https://alexeyloktev.ru/homeworks/best-tour-plan/"
+              class="back-to-index"
+              >Вернуться на главную.</a
+            >
           </div>
         </div>
         <!-- /.hotel-info__text -->
@@ -309,23 +314,29 @@
             <h3 class="footer__title footer__title--mb-32">
               Send us a message
             </h3>
-            <form action="send.php" method="POST" class="footer__form">
-              <input
-                type="text"
-                class="input footer__input"
-                placeholder="Your Full Name*"
-                name="name"
-              />
-              <input
-                type="text"
-                class="input footer__input"
-                placeholder="Phone Number*"
-                name="phone"
-              />
+            <form action="send.php" method="POST" class="footer__form form">
+              <div class="footer__input-group">
+                <input
+                  type="text"
+                  class="input footer__input"
+                  placeholder="Your Full Name*"
+                  name="name"
+                  required
+                />
+              </div>
+              <div class="footer__input-group">
+                <input
+                  type="tel"
+                  class="input footer__input"
+                  placeholder="Phone Number*"
+                  name="phone"
+                  required
+                />
+              </div>
               <textarea
                 cols="30"
                 rows="10"
-                class="footer__message"
+                class="message footer__message"
                 placeholder="Message"
                 name="message"
               ></textarea>

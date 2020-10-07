@@ -8,18 +8,23 @@ require 'phpmailer/Exception.php';
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
-$mail = $_POST['mail'];
+$mailto = $_POST['email'];
+
+$defaultmailto = 'a.a.loktev@yandex.ru';
 
 
 // Формирование самого письма
-$title = "Новое образение Best Tour Plan";
+$title = "Новое обращение Best Tour Plan";
 $body = "
 <h2>Новое обращение</h2>
 <b>Имя:</b> $name<br>
-<b>Телефон:</b> $phone<br><br>
-<b>Сообщение:</b><br>$message
-<b>Почта:</b><br>$mail
+<b>Телефон:</b> $phone<br>
+<>Сообщение:</><br>$message
+<b>Почта:</b><br>$email
 ";
+
+$titleSubscribe = "BEST-TOUR-PLAN";
+$bodySubscribe = "<h1>Благодарим Вас за подписку!</h1>";
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -38,17 +43,28 @@ try {
     $mail->Port       = 465;
     $mail->setFrom('loktev.web@gmail.com', 'Алексей Локтев'); // Адрес самой почты и имя отправителя
 
-    // Получатель письма
-    $mail->addAddress('a.a.loktev@yandex.ru');  
-    
-// Отправка сообщения
-$mail->isHTML(true);
-$mail->Subject = $title;
-$mail->Body = $body;    
+    if(!empty($name) || !empty($phone) || !empty($message))
+        $mailto = $defaultmailto;
+    else{
+        $title = $titleSubscribe;
+        $body = $bodySubscribe;
+    }
 
-// Проверяем отравленность сообщения
-if ($mail->send()) {$result = "success";} 
-else {$result = "error";}
+    // Получатель письма
+    $mail->addAddress($mailto);  
+    
+    // Отправка сообщения
+    $mail->isHTML(true);
+    $mail->Subject = $title;
+    $mail->Body = $body;    
+
+    // Проверяем отравленность сообщения
+    if ($mail->send()) {
+        $result = "success";
+    } 
+    else {
+        $result = "error";
+    }
 
 } catch (Exception $e) {
     $result = "error";
