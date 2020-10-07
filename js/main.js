@@ -108,6 +108,7 @@ $(document).ready(function () {
       },
     });
   });
+  AOS.init();
 });
 
 $(".newsletter").parallax({ imageSrc: "./img/newsletter-bg.jpg" });

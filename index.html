@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <script src="https://api-maps.yandex.ru/2.1/?apikey=138986ea-965a-4669-b09c-37c6c7161bc9&lang=ru_RU"></script>
     <!-- type="text/javascript" -->
@@ -21,6 +22,9 @@
           <a
             href="https://alexeyloktev.ru/homeworks/best-tour-plan/"
             class="logo"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
             ><img
               src="img/horizontal-logo.svg"
               alt="Logo: Best Tour Plan"
@@ -29,6 +33,10 @@
           <form
             action="#"
             class="search navbar__search navbar__search--mobile--hidden"
+            data-aos="fade-right"
+            data-aos-delay="500"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
           >
             <input
               type="text"
@@ -39,7 +47,13 @@
               <img src="img/search.svg" alt="Icon: search" />
             </button>
           </form>
-          <a href="#" class="user navbar__user navbar__user--mobile--hidden">
+          <a
+            href="#"
+            class="user navbar__user navbar__user--mobile--hidden"
+            data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
             <img
               src="img/user-avatar.jpg "
               alt="Avatar: Nathan"
@@ -133,7 +147,11 @@
     <section class="hotel">
       <div class="container">
         <div class="hotel-info">
-          <div class="hotel-info__text">
+          <div
+            class="hotel-info__text"
+            data-aos="zoom-out-right"
+            data-aos-delay="900"
+          >
             <div class="hotel-wrapper">
               <div class="stars">
                 <img src="img/star.svg" alt="star" />
@@ -150,7 +168,11 @@
               Free
             </p>
           </div>
-          <div class="rating hotel-info__rating">
+          <div
+            class="rating hotel-info__rating"
+            data-aos="zoom-out-left"
+            data-aos-delay="900"
+          >
             <span class="rating__text">User Rattings</span>
             <span class="rating__counter"
               >4.5/ <span class="rating__small">5</span>
@@ -267,7 +289,12 @@
       <!-- data-image-src="img/newsletter-bg.jpg" -->
       <div class="container">
         <div class="newsletter-wrapper">
-          <h2 class="newsletter-title newsletter__title">
+          <h2
+            class="newsletter-title newsletter__title"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
             subscribe to our
             <span class="newsletter-title__strong">Newsletter</span>
           </h2>
@@ -275,6 +302,9 @@
             action="send.php"
             method="POST"
             class="subscribe newsletter__subscribe form"
+            data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
           >
             <input
               type="email"
@@ -293,7 +323,11 @@
     <section class="reviews">
       <div class="container">
         <h2 class="reviews__title">What people think about us</h2>
-        <div class="swiper-container reviews-slider">
+        <div
+          class="swiper-container reviews-slider"
+          data-aos="flip-left"
+          data-aos-duration="2000"
+        >
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="reviews-slider__item">
@@ -481,7 +515,11 @@
       <div class="container">
         <h2 class="activities__title">Other Activities</h2>
         <div class="activities-wrapper">
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
             <img
               src="img/card-image-1.jpg"
               alt="The curious corner of chamarel"
@@ -496,7 +534,11 @@
             <!-- /.card__button -->
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="zoom-in"
+            data-aos-delay="500"
+          >
             <img
               src="img/card-image-2.jpg"
               alt="Gymkhana club golf course"
@@ -507,11 +549,15 @@
               course
             </h3>
             <!-- /.card__title -->
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
             <!-- /.card__button -->
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="zoom-in"
+            data-aos-delay="700"
+          >
             <img
               src="img/card-image-3.jpg"
               alt="Tamarind falls hiking trip - full day"
@@ -522,11 +568,15 @@
               trip - full day
             </h3>
             <!-- /.card__title -->
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
             <!-- /.card__button -->
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="zoom-in"
+            data-aos-delay="900"
+          >
             <img
               src="img/card-image-4.jpg"
               alt="The blue marine discovery quest"
@@ -537,7 +587,7 @@
               quest
             </h3>
             <!-- /.card__title -->
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
             <!-- /.card__button -->
           </div>
           <!-- /.card -->
@@ -551,11 +601,12 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <img
-            src="img/vertical-logo.svg"
-            alt="Logo: Best Tour Plan"
-            class="logo footer__logo"
-          />
+          <a href="#" class="footer__logo-link"
+            ><img
+              src="img/vertical-logo.svg"
+              alt="Logo: Best Tour Plan"
+              class="logo footer__logo"
+          /></a>
           <div class="footer__list footer__categories">
             <h3 class="footer__title">ALL CATEGORIES</h3>
             <ul class="footer__ul">
@@ -813,6 +864,7 @@
     <script src="js/parallax.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
